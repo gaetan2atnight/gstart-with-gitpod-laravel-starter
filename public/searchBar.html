@@ -1,0 +1,112 @@
+<div id="searchBar" align="center">
+	<div id="onglets">
+		<div id="onglet_web" class="onglet onglet_actif" onclick="switchSearch('web')">Web</div>
+		<div id="onglet_images" class="onglet" onclick="switchSearch('images')">Images</div>
+		<div id="onglet_videos" class="onglet" onclick="switchSearch('videos')">Vidéos</div>
+		<div id="onglet_plans" class="onglet" onclick="switchSearch('plans')">Plans</div>
+		<div id="onglet_itineraires" class="onglet" onclick="switchSearch('itineraires')">Itinéraires</div>
+		<div id="onglet_telechargements" class="onglet" onclick="switchSearch('telechargements')">Téléchargements</div>
+	</div>
+	
+	<div id="searchContent">
+		<div id="search_web" class="searchContent arroundBox">
+			<form name="f" action="http://www.google.fr/search" target="_blank">
+				
+				<div style="float:left;margin-top: 5px;">
+					<div style="float: left; padding: 4px 10px 0 10px;">
+						<img alt="logo de google" src="/design/images/google.png"/>
+					</div>
+					<div style="float:left;padding-top: 18px">
+						<input type="hidden" value="fr" name="hl"/>
+						<input id="recherche_google" type="text" title="Rechercher" value="" maxlength="2048" size="41" name="q" style="width:270px;" /> 
+						<input type="submit" value="Rechercher"/>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div id="search_images" class="searchContent arroundBox" style="display:none">
+			<form name="f2" action="http://images.google.fr/images" target="_blank">
+				<div style="float:left;margin-top: 5px;">
+					<div style="float: left; padding: 5px 10px 0 10px;">
+						<img alt="logo de images" src="/design/images/images.png"/>
+					</div>
+					<div style="float:left;padding-top: 18px">
+						<input type="text" title="Rechercher" value="" maxlength="2048" size="41" name="q" style="width:270px;" /> 
+						<input type="submit" value="Rechercher"/>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div id="search_videos" class="searchContent arroundBox" style="display:none">
+			<form name="f3" action="http://video.google.fr/videosearch" target="_blank">
+				<div style="float:left;margin-top: 5px;">
+					<div style="float: left; padding: 3px 10px 0 10px;">
+						<img alt="logo de videos" src="/design/images/videos.png"/>
+					</div>
+					<div style="float:left;padding-top: 18px">
+						<input type="text" title="Rechercher" value="" maxlength="2048" size="41" name="q" style="width:270px;" /> 
+						<input type="submit" value="Rechercher"/>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div id="search_plans" class="searchContent arroundBox" style="display:none">
+			<form name="f4" action="http://maps.google.fr/maps" target="_blank">
+				<div style="float:left;margin-top: 5px;">
+					<div style="float: left; padding: 0 10px 0 10px;">
+						<img alt="logo de plans" src="/design/images/plans.png"/>
+					</div>
+					<div style="float:left;padding-top: 18px">
+						<input type="text" title="Rechercher" value="" maxlength="2048" size="41" name="q" style="width:270px;" /> 
+						<input type="submit" value="Rechercher"/>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div id="search_itineraires" class="searchContent arroundBox" style="display:none">
+			<form name="f5" action="http://maps.google.fr/maps" target="_blank">
+				<div style="margin-top: 5px;">
+					<img alt="logo de itineraires" src="/design/images/itineraires.png"/>
+					<table style="padding-top: 5px">
+						<tr>
+							<td align="right">Départ :</td>
+							<td><input type="text" title="Départ" value="" maxlength="2048" size="41" name="saddr" style="width:270px;" /></td>
+						</tr>
+						<tr>
+							<td align="right">Arrivée :</td>
+							<td><input type="text" title="Arrivée" value="" maxlength="2048" size="41" name="daddr" style="margin-top:5px;width:270px;"/></td>
+						</tr>
+					</table>
+					<input type="submit" value="Rechercher" style="margin-top: 5px;"/>
+				</div>
+			</form>
+		</div>
+		<div id="search_telechargements" class="searchContent arroundBox" style="display:none">
+			<form name="f" action="http://4megaupload.com/" target="_blank">
+				<div style="float:left;margin-top: 5px;">
+					<div style="float: left; padding: 19px 10px 0 10px;">
+						<img alt="logo de telechargements" src="/design/images/telechargements.png"/>
+					</div>
+					<div style="float:left;padding-top: 18px">
+						<input type="text" title="Rechercher" value="" maxlength="2048" size="41" name="q" style="width:270px;" /> 
+						<input type="submit" value="Rechercher"/>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div id="share_box">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) {return;}
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		<div class="fb-like" data-href="http://www.gstart.fr/" data-send="false" data-width="300" data-show-faces="false"></div>
+	</div>
+	
+</div>
+		

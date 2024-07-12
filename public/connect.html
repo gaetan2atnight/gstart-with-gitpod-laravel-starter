@@ -1,0 +1,38 @@
+<div id="leftContent" class="arroundBox">
+	<center>
+		<h2>Identifiez-vous</h2>
+		<form action="connect.php" method="post">
+			<table  style="padding-bottom: 5px;"><tr><td align="right" NOWRAP>
+			Identifiant : 
+			</td><td align="left">
+			<input id="identifiant" name="identifiant" type="text" value="" size="15" style="width: 100px;"/>
+			</td></tr><tr><td align="right" NOWRAP>
+			Mot de passe : 
+			</td><td align="left">
+			<input id="password" name="password" type="password" value="" size="15" style="width: 100px;"/>
+			</td></tr>
+			<tr><td align="right" colspan="2">
+				<a href="inscription.php">Inscrivez-vous</a><br/>
+				<a href="sendPwd.php">J'ai perdu mes identifiants!</a>
+			</td></tr>
+			</table>
+			<input id="btn_connect" name="btn_connect" type="submit" value="Valider"/>
+		</form>
+<?php if($bad == true){ ?>
+	<div class="error">Votre utilisateur ou mot de passe est incorrect !</div>
+<?php } ?>
+		<br/>
+		<a href="conseil.php"><b>Conseiller GStart à un ami</b></a>
+		<div id="speechbubble" style="margin-top: 25px">
+			<div id="speechbubblescrollbar" style="overflow: hidden">
+				<p style="text-align:center">
+					Bienvenue sur GStart !<br/>
+					Pour commencer à utiliser votre nouvelle page d'accueil, commencez par 
+					<a href="inscription.php"> vous inscrire </a>
+					et je vous guiderai pas à pas!
+				</p>
+			</div>
+		</div>
+		<img src="/design/images/mascotte.png" alt="Mascotte du site"></img>
+	</center>
+</div>

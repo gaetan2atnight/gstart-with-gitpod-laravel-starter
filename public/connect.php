@@ -1,0 +1,1 @@
+<?phprequire_once($_SERVER['DOCUMENT_ROOT']."/classes/functions.php");require_once($_SERVER['DOCUMENT_ROOT'].'/classes/cookies.php');//Création des cookiescreateCookie('idUser', $_POST['identifiant']);createCookie('pass', $_POST['password']);//Redirection vers l'indexheader('Location: /');?>
