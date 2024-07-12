@@ -14,7 +14,7 @@ function getHead($title, $isIndex = false, $showHome = false, $description = "")
 		<meta name="keywords" content="favoris en ligne, bookmarks en ligne, signets en ligne, gérer ses favoris, gestion de favoris, 
 		sauvegarder bookmarks, sauvegarder favoris, page d\'accueil web, page d\'accueil internet, page d\'accueil personnalisée, 
 		enregistrer ses favoris, stocker ses favoris, organiser ses favoris, page de démarrage internet, page de démarrage web, 
-		accueil navigateur, page démarrage navigateur, page démarrage web, partage favoris facebook twitter"/>
+		accueil navigateur, page démarrage navigateur, page démarrage web"/>
 		<meta name="description" content="'.$description.'"/>
 		<link rel="image_src" href="/design/images/logo_base_40.png" />
 		<title>'.$title.'</title>
@@ -113,8 +113,7 @@ function getLinks(){
 		 - <a href="/referencement/page-accueil-web.php">Page d\'accueil web</a>
 		 - <a href="/referencement/page-accueil-internet.php">Page d\'accueil internet</a>
 		 - <a href="/referencement/page-accueil-personnalisee.php">Page d\'accueil personnalisée</a>
-		 - <a href="/referencement/enregistrer-stocker-favoris.php">Enregistrer et stocker ses favoris</a>
-		 - <a href="/referencement/partager-vos-sites-favoris.php">Partager vos sites favoris</a>';
+		 - <a href="/referencement/enregistrer-stocker-favoris.php">Enregistrer et stocker ses favoris</a>';
 }
 function isValidEmail($email){
 	$atom   = '[-a-z0-9!#$%&\'*+\\/=?^_`{|}~]';   // caractères autorisés avant l'arobase

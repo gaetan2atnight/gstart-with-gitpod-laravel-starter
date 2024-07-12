@@ -213,19 +213,11 @@ function deleteFolder(label, cookieLabel){
 function tree_mouse_over(index){
 	$("delete_"+index).style.display = "";
 	$("edit_"+index).style.display = "";
-	if($("facebook_"+index))
-		$("facebook_"+index).style.display = "";
-	if($("twitter_"+index))
-		$("twitter_"+index).style.display = "";
 }
 
 function tree_mouse_out(index){
 	$("delete_"+index).style.display = "none";
 	$("edit_"+index).style.display = "none";
-	if($("facebook_"+index))
-		$("facebook_"+index).style.display = "none";
-	if($("twitter_"+index))
-		$("twitter_"+index).style.display = "none";
 }
 
 function setHomePageFF() {
