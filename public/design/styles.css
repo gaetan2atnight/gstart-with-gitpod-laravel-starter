@@ -45,10 +45,6 @@ img {
 	height: 20px;
 	width: 410px;
 }
-#onglet_telechargements{
-	width: 90px;
-	background-image: url(images/onglet_90.png);
-}
 #searchBar{
 	width: 100%;
 	padding-top: 50px;

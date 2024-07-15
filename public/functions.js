@@ -367,11 +367,6 @@ function switchSearch(id){
 		    $(item).setStyle("display", "none");
 		});
 		$('search_'+id).setStyle("display", "block");
-		//Traitement spécifique
-		if(id=="telechargements")
-			$('onglet_telechargements').setStyle("background-image", "url(/design/images/onglet_select_90.png)");
-		else
-			$('onglet_telechargements').setStyle("background-image", "url(/design/images/onglet_90.png)");
 	}
 }
 
