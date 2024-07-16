@@ -285,9 +285,10 @@ img {
 }
 
 .thumb {
+  position: relative;
 	cursor: pointer;
 	width: 130px;
-	height: 117px;
+	height: 130px;
 	float: left;
 	margin-right: 10px;
 	margin-bottom: 20px;
@@ -298,6 +299,8 @@ img {
 	background-color: #00BFFF;
 }
 .labelThumb{
+  position: absolute;
+  bottom: 0; /* Positionner en bas */
 	text-align: center;
 	width: 105px;
 	margin-left: 15px;
