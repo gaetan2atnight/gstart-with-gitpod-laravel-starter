@@ -8,6 +8,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-# Gstart files
+# Gstart files to ignore
 /public/conf_server.php
 /public/logs/*
