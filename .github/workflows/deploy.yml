@@ -15,4 +15,4 @@ jobs:
         username: gstart
         password: ${{ secrets.ftp_password }}
         local-dir: /public/
-        server-dir: /home/gstart/test-deploy-github/
+        server-dir: /test-deploy-github/
