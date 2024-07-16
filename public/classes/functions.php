@@ -72,7 +72,7 @@ function getFoot(){
 	echo '<div id="footer">
 		<span>Copyright &copy; '.date("Y").' - <a href="http://www.gstart.fr/">GStart</a> - All Rights Reserved</span><br/>
 		<span>Partenaires : 
-		<a href="http://www.thumbshots.com" target="_blank" title="Thumbnails Screenshots by Thumbshots">Thumbnail Screenshots by Thumbshots</a>
+		<a href="https://pagepeeker.com/" target="_blank" title="Website thumbnails and website screenshots - PagePeeker">Website thumbnails and website screenshots - PagePeeker</a>
 		</span>
 	</div>';
 	echo '</body>
