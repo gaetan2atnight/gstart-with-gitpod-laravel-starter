@@ -2,6 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/classes/functions.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/classes/users.php");
 
+
 //Chargement des 4 images-favoris
 $arrayIconsFavoris = $userClass->getIconsFavoris($idUser);
 //Chargement des folders
