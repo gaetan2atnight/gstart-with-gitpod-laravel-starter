@@ -39,48 +39,27 @@ function getFavicon($url) {
 }
 */
 
-/* Test de la fonction fournie par chatGPT */
-function getFavicon($url) {
-  // Ajouter http si l'URL ne contient pas de schéma
+function getDomainFromUrl($url) {
+  // Vérifier et ajouter http si l'URL ne contient pas de schéma
   if (!preg_match('~^(?:f|ht)tps?://~i', $url)) {
       $url = 'http://' . $url;
   }
 
-  // Utiliser cURL pour obtenir le contenu de la page
-  $ch = curl_init($url);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // Suivre les redirections
-  $html = curl_exec($ch);
+  // Utiliser parse_url pour analyser l'URL
+  $parsedUrl = parse_url($url);
 
-  // Vérifier les erreurs
-  if (curl_errno($ch)) {
-      echo 'Erreur cURL : ' . curl_error($ch);
-      curl_close($ch);
-      return false;
+  // Vérifier si l'URL contient un composant 'host'
+  if (isset($parsedUrl['host'])) {
+      return $parsedUrl['host'];
+  } else {
+      return null;
   }
-  curl_close($ch);
+}
 
-  // Analyser le HTML pour trouver le favicon
-  $doc = new DOMDocument();
-  @$doc->loadHTML($html);
-  $links = $doc->getElementsByTagName('link');
-
-  foreach ($links as $link) {
-      $rel = $link->getAttribute('rel');
-      if (strpos($rel, 'icon') !== false) {
-          $faviconUrl = $link->getAttribute('href');
-          
-          // Vérifier si l'URL est relative ou absolue
-          if (!preg_match('~^(?:f|ht)tps?://~i', $faviconUrl)) {
-              $faviconUrl = rtrim($url, '/') . '/' . ltrim($faviconUrl, '/');
-          }
-
-          return $faviconUrl;
-      }
-  }
-
-  // Retourner une favicon par défaut si aucune n'est trouvée
-  return rtrim($url, '/') . '/favicon.ico';
+/* Test de la fonction fournie par chatGPT */
+function getFavicon($url) {
+  $domain = getDomainFromUrl($url);
+  return "https://www.google.com/s2/favicons?domain=".$domain;
 }
 
 $icon = getFavicon($_GET["url"]);
