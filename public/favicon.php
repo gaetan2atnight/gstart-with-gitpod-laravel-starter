@@ -1,10 +1,12 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/classes/logs.php");
 
+/*
 $expires = 60*60*24;
 header("Pragma: public");
 header("Cache-Control: maxage=".$expires);
 header('Expires: ' . gmdate('D, d M Y H:i:s', time()+$expires) . ' GMT');
+*/
 
 /*
 function getFavicon($url) {
