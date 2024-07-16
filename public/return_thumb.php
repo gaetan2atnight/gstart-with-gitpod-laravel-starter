@@ -2,7 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/classes/functions.php");
 
 if(isset($_GET["site"]) && isset($_GET["site"])){
-  $imagePath = "http://free.pagepeeker.com/v2/thumbs.php?size=s&code=973c738474&url=".$_GET["site"];
+  $imagePath = "http://api.pagepeeker.com/v2/thumbs.php?size=s&code=973c738474&url=".$_GET["site"];
 
   // Détermine le type MIME de l'image
   $mimeType = mime_content_type($imagePath);
