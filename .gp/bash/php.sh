@@ -144,6 +144,11 @@ if [[ $ec -ne 0 ]]; then
   php_version='gitpodlatest'
 fi
 
+sudo add-apt-repository ppa:sergey-dryabzhinsky/php74
+sudo add-apt-repository ppa:sergey-dryabzhinsky/php7-modules
+sudo add-apt-repository ppa:sergey-dryabzhinsky/backports
+sudo add-apt-repository ppa:sergey-dryabzhinsky/packages
+
 if [[ $php_version == '7.4' ]]; then
   IFS=" " read -r -a all_packages <<< "$php7_4"
 elif [[ $php_version == 'gitpodlatest' ]]; then
