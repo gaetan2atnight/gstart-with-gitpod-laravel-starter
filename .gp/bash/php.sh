@@ -66,7 +66,11 @@ install_php() {
     if grep ^deb /etc/apt/sources.list /etc/apt/sources.list.d/* | grep -wq "ondrej/php"; then
       msg="Removing ppa:ondrej/php (as specified in starter.ini)"
       echo "  $msg" | tee -a $log
-      if sudo add-apt-repository -y --remove "ppa:ondrej/php"; then
+      if sudo add-apt-repository -y --remove "ppa:sergey-dryabzhinsky/php74" && 
+      sudo add-apt-repository -y --remove "ppa:sergey-dryabzhinsky/php7-modules" &&
+      sudo add-apt-repository -y --remove "ppa:sergey-dryabzhinsky/backports" &&
+      sudo add-apt-repository -y --remove "ppa:sergey-dryabzhinsky/packages"; then
+      #if sudo add-apt-repository -y --remove "ppa:ondrej/php"; then
         echo "    SUCCESS: $msg" | tee -a $log
         echo "      The standard OS ppa will be used to install PHP $php_version"
       else
