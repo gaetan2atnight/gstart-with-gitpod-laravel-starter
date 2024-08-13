@@ -56,7 +56,7 @@ install_php() {
   ppa=$(bash /tmp/utils.sh trim_external "$ppa")
 
   # Uncomment to debugging installed packages in the build image step
-  sudo a2query -m
+  # sudo a2query -m
 
   # Disable existing php mod and prefork, this will automatically be reinstated when PHP is installed
   sudo a2dismod "php$latest_php" mpm_prefork
@@ -66,10 +66,6 @@ install_php() {
     if grep ^deb /etc/apt/sources.list /etc/apt/sources.list.d/* | grep -wq "ondrej/php"; then
       msg="Removing ppa:ondrej/php (as specified in starter.ini)"
       echo "  $msg" | tee -a $log
-      #if sudo add-apt-repository -y --remove "ppa:sergey-dryabzhinsky/php74" && 
-      #sudo add-apt-repository -y --remove "ppa:sergey-dryabzhinsky/php7-modules" &&
-      #sudo add-apt-repository -y --remove "ppa:sergey-dryabzhinsky/backports" &&
-      #sudo add-apt-repository -y --remove "ppa:sergey-dryabzhinsky/packages"; then
       if sudo add-apt-repository -y --remove "ppa:ondrej/php"; then
         echo "    SUCCESS: $msg" | tee -a $log
         echo "      The standard OS ppa will be used to install PHP $php_version"
@@ -143,11 +139,6 @@ if [[ $ec -ne 0 ]]; then
   2>&1 echo "  WARNING: could not parse /tmp/starter.ini. Defaulting PHP version to 'gitpodlatest' as specified in $gp_php_url" | tee -a $log
   php_version='gitpodlatest'
 fi
-
-sudo add-apt-repository ppa:sergey-dryabzhinsky/php74
-sudo add-apt-repository ppa:sergey-dryabzhinsky/php7-modules
-sudo add-apt-repository ppa:sergey-dryabzhinsky/backports
-sudo add-apt-repository ppa:sergey-dryabzhinsky/packages
 
 if [[ $php_version == '7.4' ]]; then
   IFS=" " read -r -a all_packages <<< "$php7_4"
