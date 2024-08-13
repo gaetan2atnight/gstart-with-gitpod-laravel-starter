@@ -11,3 +11,4 @@ yarn-error.log
 # Gstart files to ignore
 /public/conf_server.php
 /public/logs/*
+node_modules
