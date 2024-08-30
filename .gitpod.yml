@@ -30,6 +30,7 @@ tasks:
   - openMode: split-right
     command: |
       bash .gp/bash/start-server.sh
+      mv public/conf_server_gitpod.php public/conf_server.php
     name: Web Server
   - openMode: split-right
     command: |
