@@ -116,19 +116,19 @@ if [ ! -d "$GITPOD_REPO_ROOT/vendor" ]; then
   fi
   
   # BEGIN: rsync any new Laravel project files from the docker image to the repository
-  msg="rsync $(php ~/laravel-starter/artisan --version) from ~/laravel-starter to $GITPOD_REPO_ROOT"
-  log_silent "$msg" && start_spinner "$msg"
-  shopt -s dotglob
-  grc -c .gp/conf/grc/rsync-stats.conf \
-  rsync -rlptgoD --ignore-existing --stats --human-readable /home/gitpod/laravel-starter/ "$GITPOD_REPO_ROOT"
-  err_code=$?
-  if [ $err_code != 0 ]; then
-    stop_spinner $err_code
-    log -e "ERROR: $msg"
-  else
-    stop_spinner $err_code
-    log_silent "SUCCESS: $msg"
-  fi
+  #msg="rsync $(php ~/laravel-starter/artisan --version) from ~/laravel-starter to $GITPOD_REPO_ROOT"
+  #log_silent "$msg" && start_spinner "$msg"
+  #shopt -s dotglob
+  #grc -c .gp/conf/grc/rsync-stats.conf \
+  #rsync -rlptgoD --ignore-existing --stats --human-readable /home/gitpod/laravel-starter/ "$GITPOD_REPO_ROOT"
+  #err_code=$?
+  #if [ $err_code != 0 ]; then
+  #  stop_spinner $err_code
+  #  log -e "ERROR: $msg"
+  #else
+  #  stop_spinner $err_code
+  #  log_silent "SUCCESS: $msg"
+  #fi
   # END: rsync any new Laravel project files from the docker image to the repository
 
   # BEGIN: Autogenerate phpinfo.php
