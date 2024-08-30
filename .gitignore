@@ -11,3 +11,4 @@ yarn-error.log
 # Gstart files to ignore
 /public/logs/*
 node_modules
+.vscode/settings.json
