@@ -208,7 +208,7 @@ if [ ! -d "$GITPOD_REPO_ROOT/vendor" ]; then
   if [[ $__laravel_db_exists == 0 ]]; then
     msg="Creating database: laravel"
     log_silent "$msg" && start_spinner "$msg"
-    mysql -e "CREATE DATABASE laravel;"
+    mysql -e "CREATE DATABASE laravel;CREATE DATABASE gstartusr;"
     err_code=$?
     if [ $err_code != 0 ]; then
       stop_spinner $err_code
@@ -247,7 +247,7 @@ if [ ! -d "$GITPOD_REPO_ROOT/vendor" ]; then
   if [[ -f "package.json"  && ! -d "node_modules" ]]; then
     msg="Installing node modules"
     log "$msg"
-    yarn install
+    #yarn install
     err_code=$?
     if [ $err_code != 0 ]; then
       log -e "ERROR $?: $msg"
