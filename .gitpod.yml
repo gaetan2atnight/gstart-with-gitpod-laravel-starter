@@ -27,10 +27,9 @@ tasks:
       bash .gp/bash/init-project.sh
       bash .gp/bash/init-complete.sh
     name: Main Terminal
+    command: mv public/conf_server_gitpod.php public/conf_server.php
   - openMode: split-right
-    command: |
-      bash .gp/bash/start-server.sh
-      mv public/conf_server_gitpod.php public/conf_server.php
+    command: bash .gp/bash/start-server.sh
     name: Web Server
   - openMode: split-right
     command: |
