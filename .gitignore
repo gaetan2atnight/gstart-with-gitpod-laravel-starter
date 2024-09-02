@@ -11,5 +11,4 @@ yarn-error.log
 node_modules
 # Gstart files to ignore
 /public/logs/*
-public/conf_server_gitpod.php
-public/conf_server.php
+
